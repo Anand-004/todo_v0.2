@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: #f3feb8;
+    width: 100%;
+    height: vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #ffb22c;
+    border-radius:15px;
+    width: 98%;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.cont2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#showList{
+    width: 60%;
+    background-color:#ffde4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid black;
+
+    
+    
+   
+
+}
+.removebutton{
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: red;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+.removebutton:hover{
+    background-color: red;
+    color: white;
+}
+
+#ulist{
+    list-style-type:none;
+}
+
+.strikeit:checked + label{
+    text-decoration: line-through;
+    color: gray;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 1;
+    display: none;
+}
+
+#addList{
+    z-index: 3;
+    position: absolute;
+     
+    top: 160px;
+    right:30%;
+        width: 40%;
+        background-color: #ffde4d;
+        height: 200px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 30px;
+        border: 1px solid black;
+}
+
+#popup{
+    display: none;
+}
+
+.title button{
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    border: none ;
+    background-color:#f3feb8;
+    outline: none;
+    border: 1px solid black;
+    color:black;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#addList input{
+    width: 80%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    font-size: 16px;
+    padding: 20px;
+
+}
+
+#addList button{
+    height: 40px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#showList h1{
+
+    margin: 40px;
+
+}
+
+.line{
+    width:100%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 12px;
+}
+
+.listcont{
+    width: 80%;
+    padding: 10px;
+    margin: 1px;
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid black;
+}
+
+
+.boxlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.boxlist h3{
+    margin: 0 10px;
+}
+
+.buttonlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxlist input{
+    height: 25px;
+    width: 25px;
+    
+}
+.boxlist input:checked+h3{
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+
+@media(max-width:400px){
+    #addList{
+    right: 0%;
+    width: 99%;
+    }
+    #showList{
+        width: 99%;
+    }
+}
