@@ -1,10 +1,15 @@
 function check(){
     alert("js connected")
 }
+//check()
 var container=document.getElementById("showList")
 var input=document.getElementById("input")
+var input2=document.getElementById("input2")
 var rembtn=document.querySelector(".removebutton")
 var checkbtn=document.querySelector(".checkit")
+var overlay=document.getElementById("overlay")
+var popup=document.getElementById("popup")
+var popup2=document.getElementById("popup2")
 var todos=[]
 var idname=0;
 window.onload=()=>{
@@ -16,9 +21,6 @@ window.onload=()=>{
 }
 
 function makeNote(){
-    // var item=document.createElement("li")
-    // item.innerHTML="<input name='str' type='checkbox' class='strikeit'><label for='str'>"+input.value+"</label>"+"<button onclick='removeelt(event)' style='font-size:12px' class='removebutton'>.</button>"+"<hr>"
-    // ul.append(item)
     todos.push(input.value)
     localStorage.setItem('todos',JSON.stringify(todos))
     console.log(todos)
@@ -41,10 +43,10 @@ function createlist(todo){
     <h3>${todo}</h3>
     </div>
     <button class="removebutton" onclick="removeelt(event);remaray('${todo}')">Del</button>`
-    // rembtn.addEventListener('click',()=>{
-    //     remaray(todo)
-    // })
 
+
+    div.addEventListener("dblclick",()=>{showpopup2(todo);
+     })
     
 
     container.append(div)
@@ -53,18 +55,8 @@ function createlist(todo){
     input.value=""
 }
 
-
-
 function removeelt(event){
     event.target.parentElement.remove()
-      
-      
-    //   index=todos.indexOf(todo)
-    //   if(index>-1)
-    //     todos.splice(index,1)
-      
-      
-
 }
 
 function remaray(todo){
@@ -79,10 +71,31 @@ function remaray(todo){
        localStorage.setItem('todos',JSON.stringify(todos))
 }
 
-var overlay=document.getElementById("overlay")
-var popup=document.getElementById("popup")
+
 function showpopup(){
     overlay.style.display="block";
     popup.style.display="block";    
 
+}
+
+function showpopup2(todo){
+    overlay.style.display="block";
+    popup2.style.display="block";    
+    input2.value=todo
+}
+
+input2.addEventListener("click",()=>{
+    
+    globalThis.oldvalue=input2.value
+
+})
+
+function editNote(){
+    var oldval=globalThis.oldvalue
+    var index02=todos.indexOf(oldval)
+    todos[index02]=input2.value
+    localStorage.setItem('todos',JSON.stringify(todos))
+    overlay.style.display="none";
+    popup2.style.display="none";  
+    location.reload()    
 }

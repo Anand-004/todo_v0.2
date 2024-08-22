@@ -102,7 +102,28 @@
         border: 1px solid black;
 }
 
+#editlist{
+    z-index: 3;
+    position: absolute;
+     
+    top: 160px;
+    right:30%;
+        width: 40%;
+        background-color: #ffde4d;
+        height: 200px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 30px;
+        border: 1px solid black;
+}
+
 #popup{
+    display: none;
+}
+#popup2{
     display: none;
 }
 
@@ -140,7 +161,27 @@
     border-radius: 10px;
     font-size: 18px;
 }
+#editlist input{
+    width: 80%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 25px;
+    color: black;
+    font-size: 16px;
+    padding: 20px;
 
+}
+
+#editlist button{
+    height: 40px;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
 #showList h1{
 
     margin: 40px;
@@ -199,4 +240,8 @@
     #showList{
         width: 99%;
     }
+    #editlist{
+        right: 0%;
+        width: 99%;
+        }
 }
