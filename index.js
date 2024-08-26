@@ -20,6 +20,17 @@ window.onload=()=>{
     });
 }
 
+overlay.addEventListener("click",()=>{
+    hidepopups();
+})
+
+function hidepopups(){
+    overlay.style.display="none";
+    popup.style.display="none"; 
+    popup2.style.display="none";  
+
+}
+
 function makeNote(){
     todos.push(input.value)
     localStorage.setItem('todos',JSON.stringify(todos))
