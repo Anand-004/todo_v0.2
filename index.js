@@ -56,13 +56,13 @@ function createlist(todo){
     div.innerHTML=`
     <div class="boxlist">
     <input type="checkbox" class="checkit">
-    <h3>${todo}</h3>
+    <h3 onclick="showpopup2('${todo}')">${todo}</h3>
     </div>
     <button class="removebutton" onclick="removeelt(event);remaray('${todo}')">Del</button>`
 
 
-    div.addEventListener("dblclick",()=>{showpopup2(todo);
-     })
+    // div.addEventListener("dblclick",()=>{showpopup2(todo);
+    //  })
     
 
     container.append(div)
