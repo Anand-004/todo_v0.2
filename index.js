@@ -93,13 +93,8 @@ function showpopup2(todo){
     overlay.style.display="block";
     popup2.style.display="block";    
     input2.value=todo
-}
-
-input2.addEventListener("click",()=>{
-    
     globalThis.oldvalue=input2.value
-
-})
+}
 
 function editNote(){
     var oldval=globalThis.oldvalue
