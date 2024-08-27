@@ -32,13 +32,18 @@ function hidepopups(){
 }
 
 function makeNote(){
+    checknull()
+    
+   
+}
+
+function createnote() {
     todos.push(input.value)
     localStorage.setItem('todos',JSON.stringify(todos))
     console.log(todos)
     var todo=input.value;
     
     createlist(todo)
-   
 }
 
 function createlist(todo){
@@ -97,11 +102,34 @@ function showpopup2(todo){
 }
 
 function editNote(){
+    checknull2()
+      
+}
+
+function editnote() {
     var oldval=globalThis.oldvalue
     var index02=todos.indexOf(oldval)
     todos[index02]=input2.value
     localStorage.setItem('todos',JSON.stringify(todos))
     overlay.style.display="none";
     popup2.style.display="none";  
-    location.reload()    
+    location.reload()  
+    
+}
+
+function checknull(){
+    if (input.value=="") {
+        alert("write something")
+    }
+    else{
+        createnote();
+    }
+}
+function checknull2(){
+    if (input2.value=="") {
+        alert("write something")
+    }
+    else{
+        editnote();
+    }
 }
