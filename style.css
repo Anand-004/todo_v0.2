@@ -159,7 +159,7 @@
     display: none;
 }
 
-.title button{
+.btncl{
     height: 50px;
     width: 200px;
     border-radius: 20px;
@@ -171,6 +171,7 @@
     font-size: 16px;
     padding: 5px;
     cursor: pointer;
+    display: block;
 }
 
 #addList input{
@@ -288,8 +289,8 @@
         width:98%;
         font-size: 13px;
     }
-    .title button{
-        display: none;
+    .btncl{
+        display:none;
     }
     .iconpen{
         display: block;
@@ -316,7 +317,7 @@
             width:98%;
             font-size: 13px;
         }
-        .title button{
+        /* .btncl{
             display: block;
-        }
+        } */
 }
