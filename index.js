@@ -56,7 +56,7 @@ function createlist(todo){
     div.innerHTML=`
     <div class="boxlist">
     <input type="checkbox" class="checkit">
-    <h3 ondblclick="showpopup2('${todo}')">${todo}</h3>
+    <h3 onclick="showpopup2('${todo}')">${todo}</h3>
     </div>
     <button class="removebutton" onclick="removeelt(event);remaray('${todo}')">Del</button>`
 
