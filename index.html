@@ -6,12 +6,15 @@
     <title>2Do</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/one-piece-gomu-gomu-no-mi-fruit-512x512.png">
 </head>
 <body>
     <div class="container">
         <div class="title">
             <h1>To-Do List Planner</h1>
+            <span class="iconpen"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+
             <button onclick="showpopup()">Create Tasks</button>
         </div>
         <div class="cont2">
@@ -32,6 +35,9 @@
 
         </div>
         </div>
+        <div id="addbtn">
+            <button onclick="showpopup()"><i class="fa fa-sticky-note" aria-hidden="true"></i></button>
+        </div>
     </div>
     <!-- <button onclick="check()">check</button> -->
      <div id="overlay">
@@ -49,9 +55,13 @@
         <div id="editlist">
            <input type="text" id="input2" placeholder="write up your task">
            <button onclick="editNote()">edit task</button>
-   
-       </div>
-       </div>
+        
+        </div>
+    
+    </div>
+
+    </div>
+    
     <script src="index.js"></script>
 </body>
 </html>

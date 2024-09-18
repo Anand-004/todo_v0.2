@@ -6,7 +6,7 @@
 }
 
 .container{
-    background-color: #f3feb8;
+    background-color: plum;
     width: 100%;
     height: vh;
     min-height: 100vh;
@@ -49,6 +49,37 @@
    
 
 }
+#addbtn{
+   width: 60px;
+   height: 60px;
+   border-radius: 30px;
+   background-color: #ffde4d;
+   /* display:none; */
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   border: solid black 1px;
+}
+#addbtn button{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(99, 40, 99)
+}
+
+.iconpen{
+    font-size: 25px;
+}
+
+
 .removebutton{
     width: 50px;
     height: 20px;
@@ -232,10 +263,13 @@
     text-decoration: line-through;
     color: gray;
 }
+.iconpen{
+    display: none;
+}
 
 
 
-@media(max-width:400px){
+@media(max-width:475px){
     #addList{
     right: 0%;
     width: 99%;
@@ -247,7 +281,42 @@
         right: 0%;
         width: 99%;
         }
+    #addbtn{
+        display: flex;
+    }
     .title{
         width:98%;
+        font-size: 13px;
     }
+    .title button{
+        display: none;
+    }
+    .iconpen{
+        display: block;
+    }
+}
+
+@media(max-width:768px){
+    
+    #addList{
+        right: 0%;
+        width: 99%;
+        }
+        #showList{
+            width: 99%;
+        }
+        #editlist{
+            right: 0%;
+            width: 99%;
+            }
+        #addbtn{
+            display: flex;
+        }
+        .title{
+            width:98%;
+            font-size: 13px;
+        }
+        .title button{
+            display: block;
+        }
 }
